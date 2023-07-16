@@ -79,6 +79,5 @@ public class AviaSoulsTest {
         Ticket[] actual = mng.searchAndSortBy("Москва", "Самара", comp);
 
         Assertions.assertArrayEquals(expected, actual);
-
     }
 }

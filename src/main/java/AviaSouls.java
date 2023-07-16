@@ -25,11 +25,11 @@ public class AviaSouls {
 
     public Ticket[] search(String from, String to) {
         System.out.print(Arrays.toString(tickets));
-        Ticket[] result = new Ticket[0]; // массив для ответа
-        for (Ticket ticket : tickets) { // перебираем все билеты
-            if (ticket.getFrom().equals(from)) { // совпадает аэропорт вылета
-                if (ticket.getTo().equals(to)) { // совпадает аэропорт прилёта
-                    result = addToArray(result, ticket); // добавляем его в массив ответа
+        Ticket[] result = new Ticket[0];
+        for (Ticket ticket : tickets) {
+            if (ticket.getFrom().equals(from)) {
+                if (ticket.getTo().equals(to)) {
+                    result = addToArray(result, ticket);
                 }
             }
             System.out.print(Arrays.toString(result));
@@ -39,11 +39,11 @@ public class AviaSouls {
     }
 
     public Ticket[] searchAndSortBy(String from, String to, Comparator<Ticket> comp) {
-        Ticket[] result = new Ticket[0]; // массив для ответа
-        for (Ticket ticket : tickets) { // перебираем все билеты
-            if (ticket.getFrom().equals(from)) { // совпадает аэропорт вылета
-                if (ticket.getTo().equals(to)) { // совпадает аэропорт прилёта
-                    result = addToArray(result, ticket); // добавляем его в массив ответа
+        Ticket[] result = new Ticket[0];
+        for (Ticket ticket : tickets) {
+            if (ticket.getFrom().equals(from)) {
+                if (ticket.getTo().equals(to)) {
+                    result = addToArray(result, ticket);
                 }
             }
         }
