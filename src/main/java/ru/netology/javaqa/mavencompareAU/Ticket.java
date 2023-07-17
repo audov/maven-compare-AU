@@ -1,3 +1,5 @@
+package ru.netology.javaqa.mavencompareAU;
+
 import java.util.Objects;
 
 public class Ticket implements Comparable<Ticket> {
@@ -36,7 +38,6 @@ public class Ticket implements Comparable<Ticket> {
     }
 
 
-    // Вспомогательные методы для корректной работы equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -52,7 +53,7 @@ public class Ticket implements Comparable<Ticket> {
 
     @Override
     public int compareTo(Ticket t) {
-        return getPrice() - t.price;
+        return price - t.price; //getPrice() - t.price
         //     if (this.price < t.price) { // return getPrice()-t.price;
         //        return -1;
         //     } else if (this.price > t.price) {

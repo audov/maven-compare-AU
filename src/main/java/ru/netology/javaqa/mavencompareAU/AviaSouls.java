@@ -1,3 +1,5 @@
+package ru.netology.javaqa.mavencompareAU;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -23,8 +25,7 @@ public class AviaSouls {
         return tickets;
     }
 
-    public Ticket[] search(String from, String to) {
-        System.out.print(Arrays.toString(tickets));
+    public Ticket[] searchAndSortComparable(String from, String to) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : tickets) {
             if (ticket.getFrom().equals(from)) {
@@ -32,13 +33,13 @@ public class AviaSouls {
                     result = addToArray(result, ticket);
                 }
             }
-            System.out.print(Arrays.toString(result));
+            //System.out.print(Arrays.toString(result));
         }
         Arrays.sort(result);
         return result;
     }
 
-    public Ticket[] searchAndSortBy(String from, String to, Comparator<Ticket> comp) {
+    public Ticket[] searchAndSortComparator(String from, String to, Comparator<Ticket> comp) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : tickets) {
             if (ticket.getFrom().equals(from)) {

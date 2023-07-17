@@ -1,3 +1,5 @@
+package ru.netology.javaqa.mavencompareAU;
+
 import java.util.Comparator;
 
 public class TicketTimeComparator implements Comparator<Ticket> {
